@@ -1,0 +1,45 @@
+﻿
+
+@{
+    int totalItems = Model.TotalCount; // Replace this line
+    int itemsPerPage = 8; // Display 8 items per page
+    int totalPages = (int)Math.Ceiling((double)totalItems / itemsPerPage);
+    int currentPage = ViewBag.CurrentPage ?? 1; // Default to page 1 if CurrentPage is null
+    int skipItems = (currentPage - 1) * itemsPerPage; // Items to skip for the current page
+}
+<section class="home" id="home">
+
+    <div class="image">
+        <img class="pokemon2 animate__animated animate__fadeInLeft" src="~/pokemon3.png" alt="">
+    </div>
+    <div class="home-container">
+        <div class="upper-container">
+            <img class="side-img animate__animated animate__slideInLeft" src="~/2.png" alt="">
+            <img class="side-img animate__animated animate__bounceIn animate__delay-1s" src="~/3.png" alt="">
+            <img class="side-img animate__animated animate__fadeInUpBig" src="~/4.png" alt="">
+            <img class="side-img animate__animated animate__fadeInDownBig" src="~/5.png" alt="">
+            <img class="side-img animate__animated animate__slideInUp" src="~/6.png" alt="">
+            <img class="side-img animate__animated animate__tada animate__infinite" src="~/7.png" alt="">
+            <img class="side-img animate__animated animate__slideInRight" src="~/8.png" alt="">
+        </div>
+
+        <div class="lower-container">
+            <img class="side-img lower animate__animated animate__flip" src="~/9.png" alt="">
+            <img class="side-img lower animate__animated animate__flip" src="~/10.png" alt="">
+            <img class="side-img lower animate__animated animate__flip" src="~/11.png" alt="">
+            <img class="side-img lower animate__animated animate__flip" src="~/12.png" alt="">
+            <img class="side-img lower animate__animated animate__flip" src="~/13.png" alt="">
+        </div>
+
+        <div class="image">
+
+            <img class="pokemon3 animate__animated animate__fadeInRight" src="~/pokemon7.png" alt="">
+        </div>
+    </div>
+
+    <div class="image">
+        <img class="pokemon1 animate__animated animate__fadeIn" src="~/pokemon4.png" alt="">
+    </div>
+
+
+</section>
